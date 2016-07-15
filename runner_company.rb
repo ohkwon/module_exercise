@@ -15,3 +15,5 @@ intern = Intern.new(first_name: "Whatever", last_name: "Unimportant", salary: 0,
 manager.print_info
 
 intern.print_info
+
+intern.send_report
