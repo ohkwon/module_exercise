@@ -51,7 +51,7 @@ end
 
 class MountainBike < Bike
 
-  include Vehicle
+  attr_reader :direction
 
   def vroom
     puts "Vroooooooooom!"
@@ -71,3 +71,6 @@ bike.ring_bell
 
 mtbike = MountainBike.new
 mtbike.vroom
+
+mtbike.turn('east')
+puts mtbike.direction
