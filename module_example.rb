@@ -31,6 +31,7 @@ class Car
   def honk_horn
     puts "Beeeeeeep!"
   end
+
 end
 
 class Bike
@@ -45,20 +46,17 @@ class Bike
   def ring_bell
     puts "Ring ring!"
   end
+
 end
 
-class MountainBike
+class MountainBike < Bike
 
   include Vehicle
-
-  def initialize
-    @speed = 0
-    @direction = 'north'
-  end
 
   def vroom
     puts "Vroooooooooom!"
   end
+
 end
 
 car = Car.new(fuel: 50, make: "Ford", model: "Mustang")
@@ -68,7 +66,7 @@ car.turn('west')
 
 puts car.direction
 
-bike = Bike.new()
+bike = Bike.new
 bike.ring_bell
 
 mtbike = MountainBike.new
